@@ -18,7 +18,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:scaleType="fitXY"
-        
+
         android:src="@mipmap/ic_launcher" />
 
     <!--<android.support.constraint.Guideline-->
@@ -43,6 +43,7 @@
             android:layout_height="match_parent"
             android:focusable="true"
             android:focusableInTouchMode="true"
+            android:inputType="number|textEmailAddress"
             android:hint="@string/account_hint" />
     </android.support.design.widget.TextInputLayout>
 
@@ -62,6 +63,7 @@
             android:id="@+id/pwd_edit_text"
             android:focusable="true"
             android:focusableInTouchMode="true"
+            android:inputType="textPassword"
             android:hint="@string/password" />
     </android.support.design.widget.TextInputLayout>
 

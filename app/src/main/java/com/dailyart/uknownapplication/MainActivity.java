@@ -5,6 +5,7 @@ import android.media.Image;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText emailEditText;
     private TextInputEditText pwdEditText;
     private ImageView companyLogo;
+    private Toolbar toolbar;
 
     private float companyLogoHeight;
     private boolean companyLogoExtended = true;
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("");
 
         companyLogo = (ImageView)findViewById(R.id.company_logo);
 
@@ -69,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         shrinkAnimator.start();
 
         companyLogoExtended = false;
-        
+
     }
 
 
